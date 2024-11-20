@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آزمون شخصیت مخفی!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f0f0f0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>آزمون شخصیت‌شناسی فوق سری!</h1>
+    <p>روی دکمه زیر کلیک کن تا شخصیت مخفی خودت رو کشف کنی!</p>
+    <button onclick="revealPersonality()">شروع آزمون</button>
+    <p id="result" style="margin-top: 20px; font-size: 18px; color: red;"></p>
+
+    <script>
+        function revealPersonality() {
+            const personalities = [
+                "شخصیتت شبیه سوسک است! زنده، مقاوم و کمی ترسناک!",
+                "تو شبیه کارتن خالی هستی... ظاهر شیک اما خالی!",
+                "شخصیتت مثل وای‌فای ضعیفه، گاهی وصل می‌شی گاهی نه!",
+                "تو روحیه خرگوش داری، همیشه در حال فرار از مسئولیت‌ها!",
+                "شخصیتت شبیه یخچال خالیه، سرد و بی‌فایده!",
+                "شخصیتت شبیه فن کامپیوتره، همیشه می‌چرخی ولی به جایی نمی‌رسی!",
+                "تو شبیه قاشق چای‌خوری هستی، همیشه هستی ولی کم به کارت میاد!",
+                "شخصیتت مثل چراغ راهنماست، همه رو گیج می‌کنی!",
+                "شخصیتت شبیه باتری نیمه‌خالیه، خیلی دوام نمی‌آری!",
+                "تو مثل پنجره باز هستی، همه‌چی رو به رویت می‌بینن!",
+                "شخصیتت شبیه اینترنت دایال‌آپه، قدیمی و پر از انتظار!",
+                "تو شبیه کنترل تلویزیون گم‌شده‌ای، همه دنبالت می‌گردن!",
+                "شخصیتت شبیه بخاری خاموشه، وجود داری ولی گرما نمی‌دی!",
+                "تو مثل ساعت خراب هستی، روزی دوبار درست می‌شی!"
+            ];
+            const randomIndex = Math.floor(Math.random() * personalities.length);
+            document.getElementById('result').innerText = personalities[randomIndex];
+        }
+    </script>
+</body>
+</html>
